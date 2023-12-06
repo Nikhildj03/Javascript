@@ -11,7 +11,7 @@ if (true) {   // Block scope
 }
 
 
-// What ever is present in Global block scope can accept it but what ever is present in the block scope it cannot access by  the global scope.
+// What ever is present in Global scope it  can be  accept by block scope  but what ever is present in the block scope it cannot access by  the global scope.
 
 
 // console.log(a);

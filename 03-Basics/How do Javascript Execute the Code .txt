@@ -1,0 +1,63 @@
+How do Javascript Execute the Code and WHat is call stack?
+
+Javascript is a Single thread 
+  
+There are three type of Execution Context
+  => Global Execution Context
+  => Function Execution Context
+  => Eval Execution Context
+
+Process of Execution :- 
+         => Memory Creation phase
+         => Execution Phase
+   
+we can see with help of following example :- 
+
+let val1 = 10;
+let val2 = 5;
+function assNum(num1 , num2){
+  let total = num1 + num2
+  return total
+}
+let result1 = addNum(val1 , val2)
+let result2 = addNum(10,2)
+
+
+1) Global Execution 
+      ( It will refer to the variable known as "this")
+
+2) Memory Phase 
+
+val1 => undefined
+val2 = undefined
+add num => undefined
+result1 => undefined
+result2 => undefined
+
+
+
+Execution Phase :-
+
+val1 <= 10
+val2 <= 5
+add num =>     (It will Create it own thread and when the task is perform then it will get deleted) 
+[   new variable environment 
+               +
+        Execution thread     ]  {
+         
+          Memory Phase              Execution Context
+         val1 => undefined             num1 => 10
+         val2 => undefined             num2 => 5
+        total => undefined             total =>15 }
+
+addnum <= 15 (here there is a return variable also it will return the value to the Global Execution Context)
+
+similar for result2
+
+
+++++++++++++++++++++++ Call stack ++++++++++++++++++++
+
+
+suppose we have funtion a1 , a2 and a3 then , the first function will get the call and when it get execute it will go out and the next function is called
+
+=> If there is a function which call the value of a1 and a2 then first the a1 is call and then a2 now the a2 will go out first and then a1 because it follow the principle LIFO(Last In First Out)

@@ -61,3 +61,24 @@ similar for result2
 suppose we have funtion a1 , a2 and a3 then , the first function will get the call and when it get execute it will go out and the next function is called
 
 => If there is a function which call the value of a1 and a2 then first the a1 is call and then a2 now the a2 will go out first and then a1 because it follow the principle LIFO(Last In First Out)
+
+
+
+
+//////////////////////////////////////////////////////
+1.JS creates Global excution context 
+2.Next it creates memory phase
+3.Memory phase - In this phase,the variables are set to undefined 
+  until the execution phase(next phase) and the functions are set to their definitions.
+4.Next it creates the execution phase
+5.Execution phase - In this phase,the variables are initialsed to given values and 
+  when the function s are called,it creates a memory phase and execution phase for the function 
+  just like the main one.
+Returned value is passed to the global environment
+Execution context gets deleted as well
+
+For live demo:
+browser > inspect > Sources
+create a snippet with few functions and visually experience the call stack.
+
+

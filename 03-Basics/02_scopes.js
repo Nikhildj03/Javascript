@@ -19,7 +19,7 @@ if (true) {   // Block scope
 // console.log(c);
 
 
-
+//  Icecream Ex ==>  chota bacha bate bachese icecream mag sagta hai lekin bada bacha chotte bachse icecream nahi magsakta 
 function one(){
     const username = "nikhil"
 

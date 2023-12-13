@@ -62,7 +62,9 @@ form.addEventListener('submit', function (e) {
 
 ### project 3 Solutions
 
-```let clock = document.getElementById('clock');
+```
+
+let clock = document.getElementById('clock');
 
 setInterval(function () {
   let date = new Date();
